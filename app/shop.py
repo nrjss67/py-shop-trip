@@ -12,7 +12,7 @@ class Shop:
     def sell_products(self, customer: "Customer") -> None: # noqa
         print("Date: 04/01/2021 12:33:41")
         print(f"Thanks, {customer.name}, "
-              f"for your purchase!\nYou have bought: ")
+              f"for your purchase!\nYou have bought:") # noqa
         _sum = 0
 
         for product, amount in customer.product_cart.items():
