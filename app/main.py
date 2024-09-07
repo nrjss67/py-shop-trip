@@ -26,8 +26,8 @@ def shop_trip() -> None:
             print(f"{customer.name} rides to {cheapest_trip[0].name}\n")
             cheapest_trip[0].sell_products(customer)
             customer.money -= cheapest_trip[1]
-            print(f"{customer.name} rides home")
-            print(f"{customer.name} now has {customer.money} dollars\n")
+            print(f"{customer.name} rides home\n"
+                  f"{customer.name} now has {customer.money} dollars\n")
         else:
             print(f"{customer.name} doesn't have enough money "
                   f"to make a purchase in any shop")

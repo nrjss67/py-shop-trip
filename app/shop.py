@@ -10,9 +10,10 @@ class Shop:
         self.products = products
 
     def sell_products(self, customer: "Customer") -> None: # noqa
-        print("Date: 04/01/2021 12:33:41")
-        print(f"Thanks, {customer.name}, "
-              f"for your purchase!\nYou have bought:") # noqa
+        print(f"Date: 04/01/2021 12:33:41\n"
+              f"Thanks, {customer.name}, for your purchase!\n"
+              f"You have bought:") # noqa
+
         _sum = 0
 
         for product, amount in customer.product_cart.items():
@@ -26,5 +27,5 @@ class Shop:
                       f"{product_cost} dollars")
             _sum += product_cost
 
-        print(f"Total cost is {_sum} dollars")
-        print("See you again!\n")
+        print(f"Total cost is {_sum} dollars\n"
+              f"See you again!\n")

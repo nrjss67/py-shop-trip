@@ -1,4 +1,4 @@
-from math import sqrt
+from math import dist
 from app.car import Car
 from app.shop import Shop
 
@@ -23,9 +23,8 @@ class Customer:
                           fuel_cost: int | float) -> tuple:
 
         cost = 0
-        distance = sqrt((shop.location[0] - self.location[0]) ** 2
-                        + (shop.location[1] - self.location[1]) ** 2)
-        fuel_per_distance = (self.car.fuel_consumption * distance) / 100
+        _dist = dist(shop.location, self.location)
+        fuel_per_distance = (self.car.fuel_consumption * _dist) / 100
         cost += fuel_per_distance * fuel_cost * 2
 
         for product, amount in self.product_cart.items():
